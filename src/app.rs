@@ -2341,7 +2341,7 @@ impl LexiCardsApp {
             .frame(
                 egui::Frame::window(&ctx.style())
                     .fill(theme::PANEL)
-                    .stroke(Stroke::new(1.0, theme::BORDER))
+                    .stroke(Stroke::new(1.0_f32, theme::BORDER))
                     .inner_margin(Margin::same(20)),
             )
             .open(&mut open)
@@ -2654,7 +2654,7 @@ impl eframe::App for LexiCardsApp {
 fn surface() -> Frame {
     Frame::new()
         .fill(theme::PANEL)
-        .stroke(Stroke::new(1.0, theme::BORDER))
+        .stroke(Stroke::new(1.0_f32, theme::BORDER))
         .corner_radius(14.0)
         .inner_margin(Margin::same(20))
 }
@@ -2682,7 +2682,7 @@ fn primary(label: &str) -> egui::Button<'_> {
 fn secondary(label: &str) -> egui::Button<'_> {
     egui::Button::new(RichText::new(label).color(theme::INK))
         .fill(theme::PANEL)
-        .stroke(Stroke::new(1.0, theme::BORDER))
+        .stroke(Stroke::new(1.0_f32, theme::BORDER))
         .corner_radius(8.0)
 }
 
@@ -2738,7 +2738,7 @@ fn choice_chip(ui: &mut egui::Ui, selected: bool, label: &str) -> bool {
         .stroke(if selected {
             Stroke::NONE
         } else {
-            Stroke::new(1.0, theme::BORDER)
+            Stroke::new(1.0_f32, theme::BORDER)
         })
         .corner_radius(8.0)
         .min_size(Vec2::new(0.0, 34.0)),
