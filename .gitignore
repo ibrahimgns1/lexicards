@@ -1,0 +1,14 @@
+/target/
+/qa/
+/dist/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+/backups/
+.env
+.env.*
+!.env.example
+*.log
